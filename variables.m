@@ -22,15 +22,15 @@ sum_of_largest_in_row = sum(max(given_matrix, [], 2)) % 2 here means check insid
 new_2x3_matrix = [given_matrix(1,:); given_matrix(end,:)]
 
 %% Question 6: calculate pressure and temprature
-altitude_limit = 200:input("Input range step in ft: ","s"):8000;
+altitude_limit = 200:input("Input range step in ft: "):8000;
 
 [ pressure, temprature ] = pressure_and_temprature(altitude_limit)
 plot(altitude_limit, temprature),xlabel('Altitude (h)'),ylabel('Temprature (t)')
 
 
 %% Question 8: calculate cost of call
-time_of_call = input('Time of your call (day: 8AM - 6PM, evening: 6PM - 12AM, night: 12AM - 8AM): ',"s");
-duration = input('Duration of your call: ',"s");
+time_of_call = input('Time of your call (day: 8AM - 6PM, evening: 6PM - 12AM, night: 12AM - 8AM): ', 's');
+duration = input('Duration of your call: ');
 
 total_cost = cost_of_call(time_of_call, duration)
 
