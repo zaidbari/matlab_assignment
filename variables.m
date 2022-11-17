@@ -34,5 +34,44 @@ duration = input('Duration of your call: ');
 
 total_cost = cost_of_call(time_of_call, duration)
 
+
+%% Question 10:
+
+% Create structure array with 3 engineers
+eng(1).name = 'Zaid';
+eng(1).area = 'Software';
+eng(1).experience = [2018 1; 2019 2; 2021 1; 2022 2];
+
+eng(2).name = 'Bari';
+eng(2).area = 'IT';
+eng(2).experience = [2018 3; 2019 1; 2021 2; 2022 1];
+
+eng(3).name = 'Ali';
+eng(3).area = 'Civil';
+eng(3).experience = [2018 2; 2019 3; 2021 1; 2022 2];
+
+% Show last engineers name
+last_engineer_name = eng(3).name
+
+experience_before_change = eng(3).experience
+
+% change number of projects
+new_number_of_projects = eng(3).experience(4,2) * 2;
+eng(3).experience(4,2) = new_number_of_projects;
+
+experience_after_change = eng(3).experience
+
+% added for octave UBUNTU support
+pkg load io 
+
+% Read data from excel and update structure
+eng(1).experience = xlsread('eng_data.xlsx', 'data', 'A2:B5');
+eng(2).experience = xlsread('eng_data.xlsx', 'data', 'D2:E5');
+eng(3).experience = xlsread('eng_data.xlsx', 'data', 'G2:H5');
+
+
+% Display the structure as table
+struct2table(eng)
+
 while(waitforbuttonpress()==0) pause(1) end
 %%
