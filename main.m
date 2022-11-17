@@ -73,5 +73,5 @@ eng(3).experience = xlsread('eng_data.xlsx', 'data', 'G2:H5');
 % Display the structure as table
 struct2table(eng)
 
-while(waitforbuttonpress()==0) pause(1) end
+% while(waitforbuttonpress()==0) pause(1) end
 %%
