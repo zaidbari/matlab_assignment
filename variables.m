@@ -62,7 +62,7 @@ eng(3).experience(4,2) = new_number_of_projects;
 experience_after_change = eng(3).experience
 
 % added for octave UBUNTU support
-pkg load io 
+% pkg load io
 
 % Read data from excel and update structure
 eng(1).experience = xlsread('eng_data.xlsx', 'data', 'A2:B5');
